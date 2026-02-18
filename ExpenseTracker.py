@@ -74,14 +74,17 @@ def execution(choice):
     elif choice == '4':
         spending_by_category()
     elif choice == '5':
-        exit()
+        print("Exiting....")
+        return False
 
 
 def main():
     while True:
         print_menu()
         choice = get_input()
-        execution(choice)
+        result = execution(choice)
+        if result is False:
+            break
 
 
 if __name__ == "__main__":
